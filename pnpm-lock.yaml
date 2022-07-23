@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@vitejs/plugin-vue': ^1.10.2
   autoprefixer: ^10.4.7
+  pinia: ^2.0.16
   postcss: ^8.4.14
   tailwindcss: ^2.2.19
   vite: ^2.9.14
@@ -12,6 +13,7 @@ specifiers:
   vuex: ^4.0.2
 
 dependencies:
+  pinia: 2.0.16_vue@3.2.37
   vue: 3.2.37
   vue-router: 4.1.2_vue@3.2.37
   vue3-keypress: 4.0.1
@@ -983,6 +985,23 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
+  /pinia/2.0.16_vue@3.2.37:
+    resolution: {integrity: sha512-9/LMVO+/epny1NBfC77vnps4g3JRezxhhoF1xLUk8mZkUIxVnwfEAIRiAX8mYBTD/KCwZqnDMqXc8w3eU0FQGg==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.2.1
+      vue: 3.2.37
+      vue-demi: 0.13.5_vue@3.2.37
+    dev: false
+
   /postcss-js/3.0.3:
     resolution: {integrity: sha512-gWnoWQXKFw65Hk/mi2+WTQTHdPD5UJdDXZmX073EY/B3BWnYjO4F4t0VneTCnCGQ5E5GsCdMkzPaTXwl3r5dJw==}
     engines: {node: '>=10.0'}
@@ -1274,6 +1293,21 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /vue-demi/0.13.5_vue@3.2.37:
+    resolution: {integrity: sha512-tO3K2bML3AwiHmVHeKCq6HLef2st4zBXIV5aEkoJl6HZ+gJWxWv2O8wLH8qrA3SX3lDoTDHNghLX1xZg83MXvw==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.2.37
+    dev: false
 
   /vue-router/4.1.2_vue@3.2.37:
     resolution: {integrity: sha512-5BP1qXFncVRwgV/XnqzsKApdMjQPqWIpoUBdL1ynz8HyLxIX/UDAx7Ql2BjmA5CXT/p61JfZvkpiFWFpaqcfag==}

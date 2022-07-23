@@ -1,7 +1,7 @@
 <template>
     <h1 class="font-extrabold text-3xl mb-6">Home</h1>
 
-    <p class="mb-6">Name in store is: {{ name }}</p>
+    <p class="mb-6">Name in store is: {{ UserStore.name }}</p>
 
     <input
         @keyup.enter="saveName"
@@ -14,28 +14,38 @@
         Submit
     </button>
 </template>
-
-<script setup>
-// utilise this later to mitigate accessibility issues
-//import useKeypress from 'vue3-keypress'
-
+<script>
 import { computed, ref } from 'vue'
+import { useUserStore } from '../store/modules/UserStore'
 
-import { useStore } from 'vuex'
+export default {
+    setup() {
+        const UserStore = useUserStore()
 
-const store = useStore()
+        const name = computed(() => {
+            return UserStore.name
+        })
 
-const name = computed(() => {
-    return store.state.user.name
-})
+        const newName = ref('')
 
-const newName = ref('')
-
-function saveName() {
-    store.dispatch('saveName', newName.value)
-    newName.value = ''
+        function saveName() {
+            this.UserStore.name = newName.value
+            newName.value = ''
+        }
+        return {
+            computed,
+            ref,
+            UserStore,
+            name,
+            newName,
+            saveName,
+        }
+    },
 }
 </script>
 
 <style>
+h1 {
+    color: #4e46e5;
+}
 </style>
