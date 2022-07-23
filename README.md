@@ -13,6 +13,7 @@ This template should help get you started developing with **Vue 3** in **Vite
 
 The project is setup with **router** and **Pinia** store by default (*[change branch](https://github.com/Showcase-Joz/vue3-boilerplate/tree/vue-vuex) for Vuex equivalent*). **Prettier** and **tailwind** are also configured to work out the box.
 
+
 - Vite
 - Vue 3
 - Router
